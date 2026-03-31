@@ -3,31 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NXPAY</title>
+<title>NXPAY Community</title>
 
-<!-- Meta Pixel -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+t.src='https://connect.facebook.net/en_US/fbevents.js';
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script');
 
-fbq('init', '3433776890105778');
+fbq('init', 'PIXEL_ID_HERE'); // 👈 अपना Pixel ID डालो
 fbq('track', 'PageView');
 </script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"/>
+</noscript>
 <!-- End Meta Pixel -->
 
-<meta http-equiv="refresh" content="5;url=https://t.me/+HXmd1KYhu8g1Y2U9">
-
 <style>
-
 body{
 font-family: Arial;
-background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+background:#0b0f14;
 color:white;
 text-align:center;
 padding:40px;
@@ -36,21 +38,14 @@ padding:40px;
 .container{
 max-width:500px;
 margin:auto;
-background:rgba(255,255,255,0.05);
+background:#111827;
 padding:40px;
 border-radius:15px;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
+box-shadow:0 0 30px rgba(0,255,200,0.1);
 }
 
 h1{
 font-size:28px;
-margin-bottom:10px;
-}
-
-.bonus{
-font-size:24px;
-color:#00ffcc;
-margin:15px 0;
 }
 
 ul{
@@ -58,33 +53,21 @@ text-align:left;
 margin:20px 0;
 }
 
-.join-btn{
+.btn{
 display:block;
-background:#00c853;
-color:white;
+background:#00ffcc;
+color:black;
 padding:18px;
 font-size:20px;
 text-decoration:none;
-border-radius:10px;
-margin-top:20px;
-transition:0.3s;
+border-radius:30px;
+margin-top:25px;
+font-weight:bold;
 }
 
-.join-btn:hover{
-background:#00e676;
+.btn:hover{
+background:#00e6b8;
 }
-
-.icon{
-font-size:50px;
-margin-bottom:15px;
-}
-
-.note{
-margin-top:20px;
-font-size:14px;
-opacity:0.8;
-}
-
 </style>
 
 </head>
@@ -93,32 +76,40 @@ opacity:0.8;
 
 <div class="container">
 
-<div class="icon">🚀</div>
+<h1>NXPAY</h1>
 
-<h1>Join NXPAY</h1>
-
-<p>Join the fast growing digital payment community</p>
-
-<div class="bonus">₹4000 Welcome Bonus</div>
+<p>Explore mobile based digital activities and online opportunities.</p>
 
 <ul>
-<li>⚡ Fast Join</li>
-<li>🏦 Instant bank settlement</li>
-<li>🔒 Secure digital platform</li>
-<li>📊 Referral earning system</li>
+<li>📱 Mobile Based Activities</li>
+<li>💬 Community Discussions</li>
+<li>📊 Platform Insights</li>
+<li>⚡ Instant Updates</li>
 </ul>
 
-<a class="join-btn"
-href="https://t.me/+HXmd1KYhu8g1Y2U9"
-onclick="fbq('track','Lead');">
-👉 Join Now
+<!-- BUTTON -->
+<a class="btn"
+href="https://t.me/+rlQIsxMDHm5hOTQ1"
+onclick="trackLead()">
+Join Free Learning Community
 </a>
 
-<div class="note">
-You will be automatically redirected in 5 seconds...
-</div>
+<p style="margin-top:20px; font-size:13px; opacity:0.7;">
+This platform is for informational purposes only.
+</p>
 
 </div>
+
+<!-- Lead Tracking Script -->
+<script>
+function trackLead(){
+  fbq('track', 'Lead');
+
+  // Optional: event ID (for CAPI deduplication)
+  var eventID = 'lead_' + Date.now();
+  fbq('track', 'Lead', {}, {eventID: eventID});
+}
+</script>
 
 </body>
 </html>
