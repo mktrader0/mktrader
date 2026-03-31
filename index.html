@@ -1,119 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NXPAY Community</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NXPAY - Learn Digital Opportunities</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src='https://connect.facebook.net/en_US/fbevents.js';
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script');
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      text-align: center;
+      min-height: 100vh;
+      padding: 20px 15px;
+    }
 
-fbq('init', 'PIXEL_ID_HERE'); // 👈 अपना Pixel ID डालो
-fbq('track', 'PageView');
-</script>
+    .logo {
+      width: 110px;
+      height: 110px;
+      margin: 30px auto 20px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+      padding: 8px;
+      box-shadow: 0 0 40px rgba(0, 255, 170, 0.6);
+      border: 3px solid #00ffaa;
+    }
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel -->
+    .logo img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
 
-<style>
-body{
-font-family: Arial;
-background:#0b0f14;
-color:white;
-text-align:center;
-padding:40px;
-}
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
 
-.container{
-max-width:500px;
-margin:auto;
-background:#111827;
-padding:40px;
-border-radius:15px;
-box-shadow:0 0 30px rgba(0,255,200,0.1);
-}
+    .subtitle {
+      font-size: 16px;
+      color: #cccccc;
+      max-width: 320px;
+      margin: 0 auto 40px;
+      line-height: 1.4;
+    }
 
-h1{
-font-size:28px;
-}
+    .card {
+      background: #1a1a1a;
+      border-radius: 20px;
+      padding: 25px 20px;
+      max-width: 340px;
+      margin: 0 auto 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
 
-ul{
-text-align:left;
-margin:20px 0;
-}
+    .menu-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 10px;
+      font-size: 15.5px;
+      color: #e0e0e0;
+      text-align: left;
+      border-bottom: 1px solid #333;
+    }
 
-.btn{
-display:block;
-background:#00ffcc;
-color:black;
-padding:18px;
-font-size:20px;
-text-decoration:none;
-border-radius:30px;
-margin-top:25px;
-font-weight:bold;
-}
+    .menu-item:last-child {
+      border-bottom: none;
+    }
 
-.btn:hover{
-background:#00e6b8;
-}
-</style>
+    .menu-item img {
+      width: 22px;
+      height: 22px;
+    }
 
+    .join-btn {
+      background: linear-gradient(90deg, #00ffaa, #00cc88);
+      color: #000;
+      font-weight: 700;
+      font-size: 17px;
+      padding: 16px 40px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(0, 255, 170, 0.5);
+      margin: 10px 0 30px;
+      transition: all 0.3s;
+    }
+
+    .join-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px rgba(0, 255, 170, 0.7);
+    }
+
+    .bottom-text {
+      background: #1a1a1a;
+      border-radius: 16px;
+      padding: 20px;
+      font-size: 14px;
+      color: #bbbbbb;
+      max-width: 340px;
+      margin: 0 auto 20px;
+      line-height: 1.5;
+    }
+
+    .disclaimer {
+      font-size: 11px;
+      color: #666;
+      max-width: 340px;
+      margin: 0 auto;
+      line-height: 1.4;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <!-- Logo -->
+  <div class="logo">
+    <img src="https://via.placeholder.com/110x110/00ffaa/000000?text=NXpay" alt="NXPAY Logo">
+  </div>
 
-<h1>NXPAY</h1>
+  <h1>NXPAY</h1>
+  <p class="subtitle">
+    Explore mobile based digital activities and learn about online opportunities.
+  </p>
 
-<p>Explore mobile based digital activities and online opportunities.</p>
+  <!-- Main Card -->
+  <div class="card">
+    <div class="menu-item">
+      <span>📱</span>
+      <span>Mobile Based Digital Activities</span>
+    </div>
+    <div class="menu-item">
+      <span>💰</span>
+      <span>Online Opportunity Discussions</span>
+    </div>
+    <div class="menu-item">
+      <span>👥</span>
+      <span>Community Learning & Tips</span>
+    </div>
+    <div class="menu-item">
+      <span>🌐</span>
+      <span>Digital Platform Insights</span>
+    </div>
+    <div class="menu-item">
+      <span>⚡</span>
+      <span>Instant Updates & Guides</span>
+    </div>
 
-<ul>
-<li>📱 Mobile Based Activities</li>
-<li>💬 Community Discussions</li>
-<li>📊 Platform Insights</li>
-<li>⚡ Instant Updates</li>
-</ul>
+    <button class="join-btn">
+      Join Free Learning Community
+    </button>
+  </div>
 
-<!-- BUTTON -->
-<a class="btn"
-href="https://t.me/+rlQIsxMDHm5hOTQ1"
-onclick="trackLead()">
-Join Free Learning Community
-</a>
+  <!-- Bottom Description -->
+  <div class="bottom-text">
+    Our community shares information about mobile based platforms, digital tools and general online opportunities for learning and discussion.
+  </div>
 
-<p style="margin-top:20px; font-size:13px; opacity:0.7;">
-Our community shares information about mobile based platforms, digital tools and general online opportunities for learning and discussion.
-</p>
-
-</div>
-
-<!-- Lead Tracking Script -->
-<script>
-function trackLead(){
-  fbq('track', 'Lead');
-
-  // Optional: event ID (for CAPI deduplication)
-  var eventID = 'lead_' + Date.now();
-  fbq('track', 'Lead', {}, {eventID: eventID});
-}
-</script>
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    Disclaimer: This platform is created for informational and educational purposes only. We do not guarantee income or financial results. Users should evaluate opportunities independently and make responsible decisions.
+  </div>
 
 </body>
 </html>
-
 
 
 
